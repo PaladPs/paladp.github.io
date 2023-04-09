@@ -85,7 +85,7 @@ input, select, textarea {
 	@media screen and (max-width: 480) {
 
 		html, body {
-			display: none;
+			min-width: 320px;
 		}
 
 	}
