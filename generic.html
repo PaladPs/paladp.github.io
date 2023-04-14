@@ -51,17 +51,18 @@
 
 								<b> Distance Calculation in DAX</b>
 								<p> 
-									According to previous article, I have to calculates distance between two location using latitude and longitude. <br />
-									However, Power BI can't automatically calculate distance by using location point. <br />
-									So, I used The Haversin Formula for calculating the distance between two points on the surface. <br />
+									As per the previous article, I needed to determine the distance between two locations using latitude and longitude. <br />
+									Power BI does not have a built-in feature for calculating distance based on location points. <br />
+									Therefore, I used "The Haversin Formula" for calculating the distance between two points on the surface. <br />
 									Here's the formula.
 								</p>
-								<pre><code> d = 2r * asin(sqrt(sin^2((lat2-lat1)/2) + cos(lat1) * cos(lat2) * sin^2((lon2-lon1)/2)))
-									where:
-										d = distance between the two points in units of the radius of the sphere (usually kilometers or miles)
-										r = radius of the sphere (usually the Earth's radius in the desired units)
-										lat1, lat2 = latitude of point 1 and point 2 in radians
-										lon1, lon2 = longitude of point 1 and point 2 in radians
+								<pre><code> 
+d = 2r * asin(sqrt(sin^2((lat2-lat1)/2) + cos(lat1) * cos(lat2) * sin^2((lon2-lon1)/2)))
+	where:
+		d = distance between the two points in units of the radius of the sphere (usually kilometers or miles)
+		r = radius of the sphere (usually the Earth's radius in the desired units)
+		lat1, lat2 = latitude of point 1 and point 2 in radians
+		lon1, lon2 = longitude of point 1 and point 2 in radians
 								</code></pre>
 								<hr />
 								<b> Report information </b>
