@@ -36,19 +36,33 @@
 
 					<!-- Featured Post -->
 						<article class="post featured">
-								<h2> Case1 </h2>
-								<p>This case is taken from a real freelance project that I worked on. <br />
-									the dataset isn't real data. It is a newly created dataset that is similar in nature and can be used comfortably.</p>
+								<h2> Case2 </h2>
+								<p>This case is sample dataset of Food Delivery in Manhattan during 18.00 PM - 23.59 PM. <br />
+									Case2 came from my curiosity that how to handing with unfamiliar dataset.</p>
 								<hr />
-								<b> Requirements from customer : </b>
+								<b> Dataset information </b>
 								<p>
-									1. A graph showing daily sales for each branch. <br />
-									2. A graph showing daily total sales for all branches. <br />
-									3. A pie chart showing the distribution of sales for each branch combined. <br />
-									4. A graph showing the average sales for each branch. <br />
-									5. The store with the highest/lowest sales. <br />
-									6. The number of stores for each branch. <br /> 
+									The dataset contains valuable information regarding order_id, food category, shop, and sales.<br />
+									However, it is missing a crucial piece of data - the distance between the shop and the drop-off point.<br />
+									Fortunately, the dataset does include latitude and longitude columns, which can be leveraged to calculate the distance between the two points.
 								</p>
+
+								<hr />
+
+								<b> Distance Calculation in DAX</b>
+								<p> 
+									According to previous article, I have to calculates distance between two location using latitude and longitude. <br />
+									However, Power BI can't automatically calculate distance by using location point. <br />
+									So, I used The Haversin Formula for calculating the distance between two points on the surface. <br />
+									Here's the formula.
+								</p>
+								<pre><code> d = 2r * asin(sqrt(sin^2((lat2-lat1)/2) + cos(lat1) * cos(lat2) * sin^2((lon2-lon1)/2)))
+									where:
+										d = distance between the two points in units of the radius of the sphere (usually kilometers or miles)
+										r = radius of the sphere (usually the Earth's radius in the desired units)
+										lat1, lat2 = latitude of point 1 and point 2 in radians
+										lon1, lon2 = longitude of point 1 and point 2 in radians
+								</code></pre>
 								<hr />
 								<b> Report information </b>
 								<p> 
