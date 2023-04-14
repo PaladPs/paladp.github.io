@@ -70,12 +70,12 @@ lon1, lon2 = longitude of point 1 and point 2 in radians
 								<pre style="text-align: left;"> <code style="text-align: left;"> 
 Measure = 
 12742 * ASIN( SQRT ( 
-			POWER ( SIN ( [Shop_latitude] - [Dropoff_latitude] )* PI () / 360,2 ) 
-			+ COS(Shop_latitude] * PI () / 180)
-			* COS ( [Dropoff_latitude] * PI () / 180 )
-			* POWER (SIN ( [Shop__longitude] - [Dropoff_longitude] )* PI () / 360,2 )
-		)
-	)	
+		POWER ( SIN ( [Shop_latitude] - [Dropoff_latitude] )* PI () / 360,2 ) 
+		+ COS(Shop_latitude] * PI () / 180)
+		* COS ( [Dropoff_latitude] * PI () / 180 )
+		* POWER (SIN ( [Shop__longitude] - [Dropoff_longitude] )* PI () / 360,2 )
+		   )
+	   )	
 								</code></pre>
 								<hr />
 								<b> Report information </b>
